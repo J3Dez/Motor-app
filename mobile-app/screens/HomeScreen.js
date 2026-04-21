@@ -19,15 +19,17 @@ const HomeScreen = ({ navigation }) => {
         <Card />
       </ScrollView>
 
-      <View style={styles.navbar}>  {/*style/div for the nav*/}
-        <TouchableOpacity onPress={() => navigation.goBack()}> {/*goBack to come to the previous page*/}
-            <Ionicons name="home" size={40} color="black" />
+      <View style={styles.navbar}>
+          {/*style/div for the nav*/}
+        <TouchableOpacity onPress={() => navigation.goBack()}>
+          {/*goBack to come to the previous page*/}
+          <Ionicons name="home" size={35} color="#fff" />
         </TouchableOpacity> 
         <TouchableOpacity onPress={() => navigation.navigate('Products')}>
-            <AntDesign name="product" size={40} color="black" />
+          <AntDesign name="product" size={35} color="#fff" />
         </TouchableOpacity> 
         <TouchableOpacity onPress={() => navigation.navigate('Blogs')}>
-            <FontAwesome name="newspaper-o" size={40} color="black" />
+          <FontAwesome name="newspaper-o" size={35} color="#fff" />
         </TouchableOpacity> 
       </View>
     </View>
@@ -43,15 +45,17 @@ const styles = StyleSheet.create({
   },
 
   navbar: {
-    backgroundColor: "#f3f0f6",
+    backgroundColor: "#1a003c",
     position: 'absolute',
-    paddingLeft: 20,
-    paddingRight: 20,
-    borderRadius: 10,
-    bottom: 40,
+    paddingTop: 10,
+    paddingRight: 50,
+    paddingLeft: 50,
+    paddingBottom: 30,
+    borderRadius: 20,
+    bottom: 0,
     flexDirection: 'row',
     justifyContent: 'space-between',
-    width: '80%'
+    width: '100%'
   }
 });
 

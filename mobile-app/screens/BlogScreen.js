@@ -1,4 +1,4 @@
-import { StyleSheet, Text, View, TouchableOpacity  } from 'react-native';
+import { StyleSheet, Text, View, ScrollView, TouchableOpacity  } from 'react-native';
 import Card from '../Components/Card.js';
 //import for the icons
 import FontAwesome from '@expo/vector-icons/FontAwesome';
@@ -8,17 +8,19 @@ import { Ionicons } from '@expo/vector-icons';
 const BlogScreen = ( {navigation} ) => {
   return (
     <View style={styles.container}>
-      <Text>Thit is the Blog page</Text>
+      <ScrollView>
+        <Text>Thit is the Blog page</Text>
+      </ScrollView>
 
       <View style={styles.navbar}>
         <TouchableOpacity onPress={() => navigation.navigate('Home')}>
-            <Ionicons name="home" size={40} color="black" />
+          <Ionicons name="home" size={35} color="#fff" />
         </TouchableOpacity> 
         <TouchableOpacity onPress={() => navigation.navigate('Products')}>
-            <AntDesign name="product" size={40} color="black" />
+          <AntDesign name="product" size={35} color="#fff" />
         </TouchableOpacity> 
         <TouchableOpacity onPress={() => navigation.goBack()}>
-            <FontAwesome name="newspaper-o" size={40} color="black" />
+          <FontAwesome name="newspaper-o" size={35} color="#fff" />
         </TouchableOpacity> 
       </View>
     </View>
@@ -34,11 +36,17 @@ const styles = StyleSheet.create({
   },
 
   navbar: {
+    backgroundColor: "#36007c",
     position: 'absolute',
-    bottom: 40,
+    paddingTop: 10,
+    paddingRight: 50,
+    paddingLeft: 50,
+    paddingBottom: 30,
+    borderRadius: 20,
+    bottom: 0,
     flexDirection: 'row',
     justifyContent: 'space-between',
-    width: '70%'
+    width: '100%'
   }
 });
 

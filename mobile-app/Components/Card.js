@@ -69,7 +69,7 @@ const cardStyles = StyleSheet.create({
     marginBottom: 20,
   },
   btn: {
-    backgroundColor: '#249CED',
+    backgroundColor: '#5305ba',
     borderRadius: 8,
   },
   btnText: {
