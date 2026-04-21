@@ -1,23 +1,15 @@
 import React from 'react';
 import { View, Text, Image, TouchableOpacity, StyleSheet } from 'react-native';
 
-const ProductCard = ( {onPress} ) => {
+const ProductCard = ({ title, description, image, price, onPress }) => {
   return (
     <View style={cardStyles.card}>
-      <Image
-        source={{
-          uri: "https://cdn2.yamaha-motor.eu/prod/product-assets/2025/YZF1000R1COMP/2025-Yamaha-YZF1000R1COMP-EU-Tech_Black-360-Degrees-001-03.jpg"
-        }}
-        style={cardStyles.image}
-      />
+      <Image source={image} style={cardStyles.image}/>
       <View style={cardStyles.headerRow}>
-        <Text style={cardStyles.title}>R1 RACE</Text>
-        <Text style={cardStyles.price}>€ 20999</Text>
+        <Text style={cardStyles.title}>{title}</Text>
+        <Text style={cardStyles.price}>€{price}</Text>
       </View>
-
-      <Text style={cardStyles.description} numberOfLines={5}>
-        La R1 est une icône. Éprouvée sur piste, elle a remporté au cours des dix dernières années un championnat du monde SBK, deux titres de champion du monde d’endurance et de nombreux championnats nationaux. Inspirée par la YZR-M1 de MotoGP, la R1 RACE atteint des niveaux encore plus élevés de performances sur piste grâce à de nouvelles ailettes aérodynamiques, une suspension améliorée et un système de freinage Brembo.
-      </Text>
+      <Text style={cardStyles.description} numberOfLines={5}>{description}</Text>
       <TouchableOpacity
         style={cardStyles.btn}
         onPress={onPress}      >

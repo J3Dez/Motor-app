@@ -24,7 +24,8 @@ const ProductDetailScreen = ({ route }) => {
           <TouchableOpacity style={styles.buttonMi} onPress={decreaseQuantity}>
               <Text style={styles.buttonText}>-</Text>
           </TouchableOpacity>
-          <Text style={styles.totalPrice}>Aantal: {quantity} - Totale prijs: €{price * quantity}</Text>
+          <Text style={styles.totalPrice}>
+            Aantal: {quantity} - Totale prijs: €{(price * quantity).toFixed(2)}</Text>
           <TouchableOpacity style={styles.buttonMa} onPress={increaseQuantity}>
               <Text style={styles.buttonText}>+</Text>
           </TouchableOpacity>
