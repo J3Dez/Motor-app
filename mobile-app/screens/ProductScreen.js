@@ -14,7 +14,7 @@ const ProductScreen = ({ navigation }) => {
       <ScrollView>
         <ProductCard 
         onPress={() =>
-          navigation.navigate('BlogDetail', {
+          navigation.navigate('ProductDetail', {
             title: "BLOGS",
             description:
               "La R1 est une icône. Éprouvée sur piste, elle a remporté au cours des dix dernières années un championnat du monde SBK, deux titres de champion du monde d’endurance et de nombreux championnats nationaux. Inspirée par la YZR-M1 de MotoGP, la R1 RACE atteint des niveaux encore plus élevés de performances sur piste grâce à de nouvelles ailettes aérodynamiques, une suspension améliorée et un système de freinage Brembo.",
