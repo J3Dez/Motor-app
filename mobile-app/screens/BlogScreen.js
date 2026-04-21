@@ -1,4 +1,5 @@
 import { StyleSheet, Text, View, TouchableOpacity  } from 'react-native';
+import Card from '../Components/Card.js';
 //import for the icons
 import FontAwesome from '@expo/vector-icons/FontAwesome';
 import AntDesign from '@expo/vector-icons/AntDesign';
@@ -11,13 +12,13 @@ const BlogScreen = ( {navigation} ) => {
 
       <View style={styles.navbar}>
         <TouchableOpacity onPress={() => navigation.navigate('Home')}>
-            <Ionicons name="home" size={24} color="black" />
+            <Ionicons name="home" size={40} color="black" />
         </TouchableOpacity> 
         <TouchableOpacity onPress={() => navigation.navigate('Products')}>
-            <AntDesign name="product" size={24} color="black" />
+            <AntDesign name="product" size={40} color="black" />
         </TouchableOpacity> 
         <TouchableOpacity onPress={() => navigation.goBack()}>
-            <FontAwesome name="newspaper-o" size={24} color="black" />
+            <FontAwesome name="newspaper-o" size={40} color="black" />
         </TouchableOpacity> 
       </View>
     </View>
