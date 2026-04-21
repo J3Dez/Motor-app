@@ -1,5 +1,6 @@
 import { StyleSheet, Text, View, ScrollView, TouchableOpacity  } from 'react-native';
-import Card from '../Components/Card.js';
+import BlogCard from '../Components/BlogCard';
+
 //import for the icons
 import FontAwesome from '@expo/vector-icons/FontAwesome';
 import AntDesign from '@expo/vector-icons/AntDesign';
@@ -10,6 +11,7 @@ const BlogScreen = ( {navigation} ) => {
     <View style={styles.container}>
       <ScrollView>
         <Text>Thit is the Blog page</Text>
+        <BlogCard />
       </ScrollView>
 
       <View style={styles.navbar}>

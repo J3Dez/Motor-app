@@ -1,5 +1,5 @@
 import { StyleSheet, Text, View, ScrollView, TouchableOpacity, Image } from 'react-native';
-import Card from '../Components/Card';
+import ProductCard from '../Components/ProductCard';
 
 //import for the icons
 import FontAwesome from '@expo/vector-icons/FontAwesome';
@@ -12,11 +12,10 @@ const ProductScreen = ({ navigation }) => {
       <ScrollView>
         <Text>Thit is the Product pages</Text>
 
-        <Card />
-        <Card />
-        <Card />
-        <Card />
-        <Card />
+        <ProductCard />
+        <ProductCard />
+        <ProductCard />
+        <ProductCard />
       </ScrollView>
 
       <View style={styles.navbar}>
