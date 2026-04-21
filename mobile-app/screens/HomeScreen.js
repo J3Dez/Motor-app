@@ -1,4 +1,7 @@
 import { StyleSheet, Text, View, ScrollView, TouchableOpacity  } from 'react-native';
+import BlogCard from '../Components/BlogCard';
+import ProductCard from '../Components/ProductCard';
+import NavBar from '../Components/Nav';
 
 //import for the icons
 import FontAwesome from '@expo/vector-icons/FontAwesome';
@@ -8,23 +11,34 @@ import { Ionicons } from '@expo/vector-icons';
 const HomeScreen = ({ navigation }) => {
   return (
     <View style={styles.container}>
-      <ScrollView>
         <Text>Thit is the Home</Text>
+
+      <ScrollView style={styles.scroll}>
+        <BlogCard 
+        onPress={() =>
+          navigation.navigate('BlogDetail', {
+            title: "BLOGS",
+            description:
+              "La R1 est une icône. Éprouvée sur piste, elle a remporté au cours des dix dernières années un championnat du monde SBK, deux titres de champion du monde d’endurance et de nombreux championnats nationaux. Inspirée par la YZR-M1 de MotoGP, la R1 RACE atteint des niveaux encore plus élevés de performances sur piste grâce à de nouvelles ailettes aérodynamiques, une suspension améliorée et un système de freinage Brembo.",
+            image: {
+              uri: "https://cdn2.yamaha-motor.eu/prod/product-assets/2025/YZF1000R1COMP/2025-Yamaha-YZF1000R1COMP-EU-Tech_Black-360-Degrees-001-03.jpg"}
+          })
+        }/>
+        <ProductCard 
+        onPress={() =>
+          navigation.navigate('BlogDetail', {
+            title: "BLOGS",
+            description:
+              "La R1 est une icône. Éprouvée sur piste, elle a remporté au cours des dix dernières années un championnat du monde SBK, deux titres de champion du monde d’endurance et de nombreux championnats nationaux. Inspirée par la YZR-M1 de MotoGP, la R1 RACE atteint des niveaux encore plus élevés de performances sur piste grâce à de nouvelles ailettes aérodynamiques, une suspension améliorée et un système de freinage Brembo.",
+            price: "20999",
+            image: {
+              uri: "https://cdn2.yamaha-motor.eu/prod/product-assets/2025/YZF1000R1COMP/2025-Yamaha-YZF1000R1COMP-EU-Tech_Black-360-Degrees-001-03.jpg"
+            }
+          })
+        }/>
       </ScrollView>
 
-      <View style={styles.navbar}>
-          {/*style/div for the nav*/}
-        <TouchableOpacity onPress={() => navigation.goBack()}>
-          {/*goBack to come to the previous page*/}
-          <Ionicons name="home" size={35} color="#fff" />
-        </TouchableOpacity> 
-        <TouchableOpacity onPress={() => navigation.navigate('Products')}>
-          <AntDesign name="product" size={35} color="#fff" />
-        </TouchableOpacity> 
-        <TouchableOpacity onPress={() => navigation.navigate('Blogs')}>
-          <FontAwesome name="newspaper-o" size={35} color="#fff" />
-        </TouchableOpacity> 
-      </View>
+      <NavBar navigation={navigation} />
     </View>
   );
 }
@@ -36,7 +50,9 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
   },
-
+  scroll: {
+    marginBottom: 60,
+  },
   navbar: {
     backgroundColor: "#1a003c",
     position: 'absolute',
